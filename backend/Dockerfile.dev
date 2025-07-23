@@ -1,0 +1,16 @@
+# backend/Dockerfile.dev
+FROM node:22-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+# ts-node-dev уже у тебя в devDependencies — ничего дополнительно не надо
+
+COPY . .
+
+EXPOSE 4002
+
+CMD ["npm", "run", "dev"]

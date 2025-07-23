@@ -1,0 +1,58 @@
+{
+  "name": "auth-backend",
+  "version": "1.0.0",
+  "description": "Простой бекенд с JWT авторизацией и Redis",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "test": "ts-node src/test-api.ts",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "db:migrate": "sequelize-cli db:migrate",
+    "db:migrate:undo": "sequelize-cli db:migrate:undo",
+    "db:seed": "sequelize-cli db:seed:all",
+    "db:seed:undo": "sequelize-cli db:seed:undo:all"
+  },
+  "dependencies": {
+    "@types/cookie-parser": "^1.4.9",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "ioredis": "^5.3.2",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.35.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/ioredis": "^4.28.7",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^20.10.0",
+    "@types/pg": "^8.10.9",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "eslint": "^8.54.0",
+    "sequelize-cli": "^6.6.2",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  },
+  "keywords": [
+    "express",
+    "jwt",
+    "redis",
+    "auth",
+    "typescript",
+    "postgres",
+    "sequelize"
+  ],
+  "author": "",
+  "license": "MIT"
+}

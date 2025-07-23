@@ -1,0 +1,28 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    command: npm run dev
+    environment:
+      - NODE_ENV=development
+    ports:
+      - '4002:4002'
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    command: npm run dev
+    environment:
+      - CHOKIDAR_USEPOLLING=true # 👈 Для работы HMR внутри Docker на Windows/macOS
+    ports:
+      - '4001:4001'

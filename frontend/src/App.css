@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Кастомные стили для Ant Design */
+.ant-layout {
+  min-height: 100vh;
+}
+
+.ant-layout-sider {
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.ant-layout-header {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ant-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ant-btn {
+  border-radius: 6px;
+}
+
+.ant-input {
+  border-radius: 6px;
+}
+
+.ant-form-item-label > label {
+  font-weight: 500;
+}
+
+/* Анимации */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
